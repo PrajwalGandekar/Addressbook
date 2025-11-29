@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage ('Git Checkout') {
       steps {
-        git 'https://github.com/cbabu85/DevOpsAddressBook.git'
+        git 'https://github.com/prajwalgandekar/DevOpsAddressBook.git'
       }
   }
     stage (' Build Package') {
@@ -16,7 +16,7 @@ pipeline {
   }
     stage ('Build the Docker Image of my package') {
       steps {
-       sh 'docker build -t cbabu85/addressbook.war .'
+       sh 'docker build -t your-dockerhub-username/addressbook.war .'
         }
       }
     }
